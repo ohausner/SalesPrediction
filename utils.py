@@ -1,5 +1,23 @@
 # Utils
 
+## IMPORTS
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import stats
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+from sklearn.metrics import root_mean_squared_error, mean_absolute_error
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+import warnings
+warnings.filterwarnings('ignore')
+
+from tqdm import tqdm
+
+tqdm.pandas()
+
 def rmsle_manual(y_true, y_pred):
     """
     Calculates the Root Mean Squared Logarithmic Error (RMSLE).
